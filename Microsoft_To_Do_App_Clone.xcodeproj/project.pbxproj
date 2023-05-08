@@ -32,7 +32,7 @@
 		8E29A8F52A0771190060A854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E29A8F72A0771190060A854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E29A9062A0921CF0060A854 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
-		8E29A9082A095E6E0060A854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Controller/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		8E29A9082A095E6E0060A854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Model/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		8E29A90A2A095F2F0060A854 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F9B8808B813CE0AF5AA471DD /* Pods_Microsoft_To_Do_App_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Microsoft_To_Do_App_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE14BC0EB5BF400915445A2 /* Pods-Microsoft_To_Do_App_Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microsoft_To_Do_App_Clone.release.xcconfig"; path = "Target Support Files/Pods-Microsoft_To_Do_App_Clone/Pods-Microsoft_To_Do_App_Clone.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,9 +53,9 @@
 		8E29A8DA2A0771180060A854 = {
 			isa = PBXGroup;
 			children = (
+				8E29A90C2A0965170060A854 /* Model */,
 				8E29A8FF2A07718A0060A854 /* Controller */,
 				8E29A8FE2A0771840060A854 /* View */,
-				8E29A8FD2A07717C0060A854 /* Model */,
 				8E29A8E52A0771180060A854 /* toDoListApp */,
 				8E29A8E42A0771180060A854 /* Products */,
 				E92FFB2AECA4400DF7401E1A /* Pods */,
@@ -86,14 +86,6 @@
 			path = toDoListApp;
 			sourceTree = "<group>";
 		};
-		8E29A8FD2A07717C0060A854 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8E29A9082A095E6E0060A854 /* Extensions.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8E29A8FE2A0771840060A854 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +100,14 @@
 				8E29A9062A0921CF0060A854 /* homeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E29A90C2A0965170060A854 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E29A9082A095E6E0060A854 /* Extensions.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BD4916F5F5FBCA6138023E9D /* Frameworks */ = {
