@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController
 {
@@ -132,6 +133,58 @@ class ViewController: UIViewController
         return view
     }()
     
+    @objc func loginViewClicked()
+    {
+        let lgn = loginTextField.text!
+        if isValidEmail(testStr: lgn)
+        {
+            Auth.auth().createUser(withEmail: lgn, password: "12345678") { authResult, error in
+              
+                let vc = homeViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                self.present(nav, animated: true)
+                
+            }
+        }
+        else if isValidPhoneNumber(value: lgn)
+        {
+            PhoneAuthProvider.provider()
+              .verifyPhoneNumber(lgn, uiDelegate: nil) { verificationID, error in
+                  if let error = error {
+                    
+                    return
+                  }
+                  if let verificationID = verificationID
+                  {
+                      UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+                      let credential = PhoneAuthProvider.provider().credential(
+                        withVerificationID: verificationID,
+                        verificationCode: "verificationCode"
+                      )
+                      
+                      Auth.auth().signIn(with: credential) { authResult, error in
+                          if let error = error {
+                              let authError = error as NSError
+                              
+                              let vc = homeViewController()
+                              let nav = UINavigationController(rootViewController: vc)
+                              self.present(nav, animated: true)
+                              
+                          }
+                      }
+                      
+                  }
+              }
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Microsoft To Do", message: "Lütfen geçerli bir email adresi veya telefon numarası giriniz.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Kapat", style: .default)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+    }
+    
     func isValidEmail(testStr:String) -> Bool
     {
         let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
@@ -148,6 +201,7 @@ class ViewController: UIViewController
         return result
     }
     
+    
     func configureUI()
     {
         view.addSubview(welcomeView)
@@ -155,6 +209,9 @@ class ViewController: UIViewController
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(xCircleClicked))
         xCircle.addGestureRecognizer(tap)
+        
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(loginViewClicked))
+        loginButtonView.addGestureRecognizer(tap2)
     }
 
     override func viewDidLoad()
@@ -232,43 +289,3 @@ extension ViewController : UITextFieldDelegate
     }
 }
 
-extension UIView
-{
-    
-    func anchor(top: NSLayoutYAxisAnchor?, paddingTop: CGFloat, bottom: NSLayoutYAxisAnchor?, paddingBottom: CGFloat, left: NSLayoutXAxisAnchor?, paddingLeft: CGFloat, right: NSLayoutXAxisAnchor?, paddingRight: CGFloat,centerX:NSLayoutXAxisAnchor?,paddingCenterX:CGFloat,centerY:NSLayoutYAxisAnchor?,paddingCenterY:CGFloat, width: CGFloat, height: CGFloat)
-{
-        translatesAutoresizingMaskIntoConstraints = false
-        if let top = top
-        {
-            topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
-        }
-        if let bottom = bottom
-        {
-            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
-        }
-        if let right = right
-        {
-            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
-        }
-        if let left = left
-        {
-            leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
-        }
-        if let centerX = centerX
-        {
-            centerXAnchor.constraint(equalTo: centerX, constant: paddingCenterX).isActive = true
-        }
-        if let centerY = centerY
-        {
-            centerYAnchor.constraint(equalTo: centerY, constant: paddingCenterY).isActive = true
-        }
-        if width != 0
-        {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-        if height != 0
-        {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-    }
-}
