@@ -124,6 +124,7 @@ class ViewController: UIViewController
     {
        let view = UIView()
         view.backgroundColor = UIColor.systemBlue
+        view.isUserInteractionEnabled = true
         view.alpha = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 5
@@ -142,6 +143,7 @@ class ViewController: UIViewController
               
                 let vc = homeViewController()
                 let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true)
                 
             }
@@ -168,6 +170,7 @@ class ViewController: UIViewController
                               
                               let vc = homeViewController()
                               let nav = UINavigationController(rootViewController: vc)
+                              nav.modalPresentationStyle = .fullScreen
                               self.present(nav, animated: true)
                               
                           }

@@ -17,6 +17,7 @@
 		8E29A9072A0921CF0060A854 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29A9062A0921CF0060A854 /* homeViewController.swift */; };
 		8E29A9092A095E6E0060A854 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29A9082A095E6E0060A854 /* Extensions.swift */; };
 		8E29A90B2A095F2F0060A854 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E29A90A2A095F2F0060A854 /* GoogleService-Info.plist */; };
+		8E29A90E2A0A1D8B0060A854 /* toDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29A90D2A0A1D8B0060A854 /* toDoCell.swift */; };
 		DE3073FAEC462A65C50CCCBD /* Pods_Microsoft_To_Do_App_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B8808B813CE0AF5AA471DD /* Pods_Microsoft_To_Do_App_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		8E29A9062A0921CF0060A854 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		8E29A9082A095E6E0060A854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Model/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		8E29A90A2A095F2F0060A854 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E29A90D2A0A1D8B0060A854 /* toDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoCell.swift; sourceTree = "<group>"; };
 		F9B8808B813CE0AF5AA471DD /* Pods_Microsoft_To_Do_App_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Microsoft_To_Do_App_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE14BC0EB5BF400915445A2 /* Pods-Microsoft_To_Do_App_Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microsoft_To_Do_App_Clone.release.xcconfig"; path = "Target Support Files/Pods-Microsoft_To_Do_App_Clone/Pods-Microsoft_To_Do_App_Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		8E29A8FE2A0771840060A854 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E29A9102A0A50D70060A854 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +111,14 @@
 				8E29A9082A095E6E0060A854 /* Extensions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8E29A9102A0A50D70060A854 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8E29A90D2A0A1D8B0060A854 /* toDoCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BD4916F5F5FBCA6138023E9D /* Frameworks */ = {
@@ -246,6 +257,7 @@
 				8E29A8EB2A0771190060A854 /* loginViewController.swift in Sources */,
 				8E29A9092A095E6E0060A854 /* Extensions.swift in Sources */,
 				8E29A8E72A0771190060A854 /* AppDelegate.swift in Sources */,
+				8E29A90E2A0A1D8B0060A854 /* toDoCell.swift in Sources */,
 				8E29A8E92A0771190060A854 /* SceneDelegate.swift in Sources */,
 				8E29A9072A0921CF0060A854 /* homeViewController.swift in Sources */,
 				8E29A8F12A0771190060A854 /* toDoListApp.xcdatamodeld in Sources */,

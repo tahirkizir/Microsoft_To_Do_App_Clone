@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         
-        if Auth.auth().currentUser == nil
+        if Auth.auth().currentUser != nil
         {
             let vc = homeViewController()
             let nav = UINavigationController(rootViewController: vc)

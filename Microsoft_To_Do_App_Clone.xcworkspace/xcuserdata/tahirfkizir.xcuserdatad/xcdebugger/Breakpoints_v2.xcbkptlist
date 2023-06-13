@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C619F592-B880-4ADE-93E3-EDD1B98B6BA9"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A682A4B-3909-40BB-A5A0-CAFB7A59B8A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/loginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "loginViewClicked()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3A682A4B-3909-40BB-A5A0-CAFB7A59B8A2 - 3ebe0facbce80b42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Microsoft_To_Do_App_Clone.ViewController.isValidPhoneNumber(value: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Microsoft_To_Do_App_Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahirfkizir/Desktop/XC/toDoListApp/Controller/loginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "3A682A4B-3909-40BB-A5A0-CAFB7A59B8A2 - 3300c2b69c3e5dfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Microsoft_To_Do_App_Clone.ViewController.loginViewClicked() -&gt; ()"
+                  moduleName = "Microsoft_To_Do_App_Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahirfkizir/Desktop/XC/toDoListApp/Controller/loginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "3A682A4B-3909-40BB-A5A0-CAFB7A59B8A2 - 590676ed2f7645fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Microsoft_To_Do_App_Clone.ViewController.loginViewClicked() -&gt; ()"
+                  moduleName = "Microsoft_To_Do_App_Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahirfkizir/Desktop/XC/toDoListApp/Controller/loginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "795D90F8-5640-4899-AC5F-F700E23BCBB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/loginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "loginViewClicked()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "795D90F8-5640-4899-AC5F-F700E23BCBB6 - 61ba7b6e20666742"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Microsoft_To_Do_App_Clone.ViewController.isValidEmail(testStr: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Microsoft_To_Do_App_Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahirfkizir/Desktop/XC/toDoListApp/Controller/loginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "795D90F8-5640-4899-AC5F-F700E23BCBB6 - 3300c2b69c3e5dbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Microsoft_To_Do_App_Clone.ViewController.loginViewClicked() -&gt; ()"
+                  moduleName = "Microsoft_To_Do_App_Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahirfkizir/Desktop/XC/toDoListApp/Controller/loginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
